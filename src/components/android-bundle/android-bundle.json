@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_android_bundle_android_bundles",
+  "info": {
+    "displayName": "androidBundle",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "androidBundle": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

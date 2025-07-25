@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "ios_bundles",
+  "info": {
+    "singularName": "ios-bundle",
+    "pluralName": "ios-bundles",
+    "displayName": "iosBundle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bundleDownload": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}

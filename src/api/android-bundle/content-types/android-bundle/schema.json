@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "android_bundles",
+  "info": {
+    "singularName": "android-bundle",
+    "pluralName": "android-bundles",
+    "displayName": "androidBundle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bundleDownload": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}
