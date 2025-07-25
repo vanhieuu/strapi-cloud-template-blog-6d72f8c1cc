@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_android_bundle_android_bundles",
+  "collectionName": "components_android_bundle_android_download_bundles",
   "info": {
-    "displayName": "downloadAndroidUrl",
-    "icon": "code"
+    "displayName": "downloadIosUrl"
   },
   "options": {},
   "attributes": {
@@ -16,7 +15,7 @@
         "audios"
       ]
     },
-    "androidBundle": {
+    "iosBundle": {
       "type": "string"
     }
   },

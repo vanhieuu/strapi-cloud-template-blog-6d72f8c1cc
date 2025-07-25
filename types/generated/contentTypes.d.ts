@@ -442,6 +442,40 @@ export interface ApiAndroidBundleAndroidBundle extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBundleVersionBundleVersion
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'bundle_versions';
+  info: {
+    displayName: 'BundleVersion';
+    pluralName: 'bundle-versions';
+    singularName: 'bundle-version';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    android: Schema.Attribute.Component<'android-bundle.android-bundle', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ios: Schema.Attribute.Component<
+      'android-bundle.android-download-bundle',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::bundle-version.bundle-version'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    version: Schema.Attribute.String;
+  };
+}
+
 export interface ApiIosBundleIosBundle extends Struct.SingleTypeSchema {
   collectionName: 'ios_bundles';
   info: {
@@ -929,7 +963,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -985,6 +1018,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::android-bundle.android-bundle': ApiAndroidBundleAndroidBundle;
+      'api::bundle-version.bundle-version': ApiBundleVersionBundleVersion;
       'api::ios-bundle.ios-bundle': ApiIosBundleIosBundle;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

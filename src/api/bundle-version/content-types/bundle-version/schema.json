@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bundle_versions",
+  "info": {
+    "singularName": "bundle-version",
+    "pluralName": "bundle-versions",
+    "displayName": "BundleVersion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "version": {
+      "type": "string"
+    },
+    "android": {
+      "type": "component",
+      "component": "android-bundle.android-bundle",
+      "repeatable": false
+    },
+    "ios": {
+      "type": "component",
+      "component": "android-bundle.android-download-bundle",
+      "repeatable": false
+    }
+  }
+}
